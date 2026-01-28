@@ -16,9 +16,19 @@ MonoBehaviour:
   npcPortrait: {fileID: -3972179749553808558, guid: 431e3c7241f052d4f97248d7dd7a728a, type: 3}
   dialogueLines:
   - Howdy
-  - Nice to meet you
-  autoProgressLines: 01
+  - Im Jamie and you are?
+  - Nice to meet you Fungy.
+  - See you around
+  - Rude.
+  autoProgressLines: 000000000000
+  endDialogueLines: 000000010100
   AutoProgressDelay: 1.5
   typingSpeed: 0.05
   voiceSound: {fileID: 0}
   voicePitch: 1
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Fungy
+    - None of your business.
+    nextDialogueIndexes: 0200000004000000
