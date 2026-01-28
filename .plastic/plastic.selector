@@ -1,3 +1,0 @@
-repository "DangerousPotion/DangerousPotion@5772998903956@cloud"
-  path "/"
-    smartbranch "/main"
