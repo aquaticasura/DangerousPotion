@@ -1,0 +1,110 @@
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using System.Collections;
+using UnityEditor;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
+
+public class NPC : MonoBehaviour, Interactable
+{
+    public NPCDialogue dialogueData;
+    public GameObject dialoguePanel;
+    public TMP_Text dialogueText, nameText;
+    public Image portraitImage;
+    public bool combat;
+
+
+
+
+
+    private int dialogueIndex;
+    private bool isTyping, isDialogueActive;
+
+    public bool CanInteract()
+    {
+        return !isDialogueActive;
+    }
+
+    public void Interact()
+    {
+        if (dialogueData == null || (PauseController.IsGamePaused && !isDialogueActive))
+            return;
+
+        if (isDialogueActive)
+        {
+            NextLine();
+        }
+        else
+        {
+            StartDialogue();
+        }
+    }
+
+    void StartDialogue()
+    {
+        isDialogueActive = true;
+        dialogueIndex = 0;
+
+        nameText.SetText(dialogueData.npcName);
+        portraitImage.sprite = dialogueData.npcPortrait;
+
+        dialoguePanel.SetActive(true);
+        PauseController.SetPause(true);
+
+        StartCoroutine(TypeLine());
+
+
+    }
+    void NextLine()
+    {
+        if (isTyping)
+        {
+            //skip skriveanimasjon til full linje tekst
+            StopAllCoroutines();
+            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+            isTyping = false;
+        }
+        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
+        {
+            //hvis ny linje, start på neste linje
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            //slutt dialogen
+            EndDialogue();
+        }
+    }
+    IEnumerator TypeLine()
+    {
+        isTyping = true;
+        dialogueText.SetText("");
+
+        foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(dialogueData.typingSpeed);
+        }
+
+        isTyping = false;
+        if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
+        {
+            yield return new WaitForSeconds(dialogueData.AutoProgressDelay);
+            NextLine();
+        }
+    }
+
+    public void EndDialogue()
+    {
+        StopAllCoroutines();
+        isDialogueActive = false;
+        dialogueText.SetText("");
+        dialoguePanel.SetActive(false);
+        PauseController.SetPause(false);
+        if (combat)
+        {
+            //null
+        }
+    }
+}
