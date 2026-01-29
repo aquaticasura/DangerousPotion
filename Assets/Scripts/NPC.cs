@@ -1,10 +1,11 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 using System.Collections;
-using UnityEditor;
+using System.Drawing;
+using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NPC : MonoBehaviour, Interactable
 {
@@ -76,7 +77,7 @@ public class NPC : MonoBehaviour, Interactable
         foreach(DialogueChoice dialogueChoice in dialogueData.choices)
         {
             if ( dialogueChoice.dialogueIndex == dialogueIndex )
-            {
+            { 
                 DisplayChoices(dialogueChoice);
                 return;
             }

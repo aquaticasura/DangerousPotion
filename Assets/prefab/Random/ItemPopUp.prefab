@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41, y: 3.9}
-  m_SizeDelta: {x: 199.4352, y: 85.9899}
+  m_AnchoredPosition: {x: 41, y: 0.28916}
+  m_SizeDelta: {x: 199.4352, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1618314534841965175
 CanvasRenderer:
@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Crown Flower
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 20dd19684ae192440ba6ad01108d2ff4, type: 2}
-  m_sharedMaterial: {fileID: -3898357575578375347, guid: 20dd19684ae192440ba6ad01108d2ff4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 96485f04f2cdd6143a40cc5b1fb8a687, type: 2}
+  m_sharedMaterial: {fileID: 3985872953464975063, guid: 96485f04f2cdd6143a40cc5b1fb8a687, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8905146225842624044, guid: d3bed7ae883d3fc4aae92fa7bde35746, type: 3}
+  m_Sprite: {fileID: 5120361244195882153, guid: 3e8f8fad898c0cb4fb381fe5812488b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

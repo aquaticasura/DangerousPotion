@@ -11,6 +11,7 @@ public class DialogueController : MonoBehaviour
     public Image portraitImage;
     public Transform choiceContainer;
     public GameObject choiceButtonPrefab;
+    public GameObject dialogueholder;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -20,7 +21,7 @@ public class DialogueController : MonoBehaviour
 
     public void ShowDialogueUI(bool show)
     {
-        dialoguePanel.SetActive(show);
+        dialogueholder.SetActive(show);
     }
 
     public void SetNPCInfo(string npcName, Sprite portrait)
@@ -45,4 +46,23 @@ public class DialogueController : MonoBehaviour
         choiceButton.GetComponent<Button>().onClick.AddListener(onClick);
         return choiceButton;
     }
+    /*public void ButtonColor(string color)
+    {
+        if (color == "Purple")
+        {
+            choiceButtonPrefab = purplechoiceButtonPrefab;
+        }
+        if (color == "Green")
+        {
+            choiceButtonPrefab = greenchoiceButtonPrefab;
+        }
+        if (color == "Blue")
+        {
+            choiceButtonPrefab = bluechoiceButtonPrefab;
+        }
+        if (color == "Red")
+        {
+            choiceButtonPrefab = choiceButtonPrefab;
+        }
+    }*/
 }

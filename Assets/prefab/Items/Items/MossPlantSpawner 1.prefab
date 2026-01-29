@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4061a93de9b67f34896f385f5bb7f915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  itemtype: {fileID: 3327766000083226066, guid: 887fd0460386866d08bb23a9ac2f6240, type: 3}
+  itemtype: {fileID: 6894783696238234616, guid: da268b7765c44b64d919c71051f406f6, type: 3}
   itemholder: {fileID: 847990698134748569}
   maxspawn: 85
   lowspawn: 20
