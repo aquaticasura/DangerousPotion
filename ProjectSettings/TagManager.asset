@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - player
   - Hover
+  - Gelidus
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Above
+    uniqueID: 3497175193
     locked: 0
   m_RenderingLayers:
   - Default

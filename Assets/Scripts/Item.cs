@@ -12,6 +12,8 @@ public class Item : MonoBehaviour
     private TMP_Text quantityText;
     private GameObject NameImage;
 
+
+
     private void Awake()
     {
         quantityText = GetComponentInChildren<TMP_Text>();
@@ -60,11 +62,7 @@ public class Item : MonoBehaviour
     }
     public virtual void UseItem()
     {
-
-            
-        
-
-
+        //effect when item used
     }
 
     public virtual void PickUp()

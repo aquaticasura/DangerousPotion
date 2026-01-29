@@ -9,9 +9,10 @@ public class HotbarController : MonoBehaviour
     public GameObject hotbarPanel;
     public GameObject slotPrefab;
     public int slotCount = 5;
+    public string itemhold;
 
 
-
+    private string replace = "(Clone)";
 
 
 
@@ -49,8 +50,14 @@ public class HotbarController : MonoBehaviour
         {
             Item item = slot.currentItem.GetComponent<Item>();
             item.UseItem();
+            if (slot.currentItem != null)
+            {
+                itemhold = item.name;
+                string result = itemhold.Replace(replace, "");
+                Debug.Log(result);
+            }
+    
 
- 
 
         }
     }
