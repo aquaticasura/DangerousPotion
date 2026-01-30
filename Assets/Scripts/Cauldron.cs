@@ -1,24 +1,22 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Splines.Interpolators;
 
-public class Cauldron : MonoBehaviour, IPointerClickHandler
+public class Cauldron : MonoBehaviour, Interactable
 {
     public string[] ingredients;
-    HotbarController hotbarcontroller;
-    public void OnPointerClick(PointerEventData eventData)
+    public GameObject brewingpanel;
+
+    public void closepanel()
     {
-        int i = 0; 
-        Debug.Log("CauldronClciked");
-        ingredients[0] = hotbarcontroller.itemhold;
-        i++;
-        
+        brewingpanel.SetActive(false);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hotbarcontroller = GetComponent<HotbarController>();
+
     }
 
     // Update is called once per frame
@@ -28,5 +26,13 @@ public class Cauldron : MonoBehaviour, IPointerClickHandler
         
     }
 
+    public void Interact()
+    {
+        brewingpanel.SetActive(true);
+    }
 
+    public bool CanInteract()
+    {
+        return !brewingpanel.activeSelf;
+    }
 }

@@ -5,11 +5,11 @@ public class CraftingLogic : MonoBehaviour
 
     public Slot slot;
     public string crafting;
-    private string replace = "(Clone) (UnityEngine.GameObject)";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -17,13 +17,21 @@ public class CraftingLogic : MonoBehaviour
     {
 
 
-        if (slot.currentItem != null)
+         if (slot.currentItem != null)
         {
-            if (slot.currentItem.ToString() != crafting)
+            Item slotItem = slot.currentItem.GetComponent<Item>();
+
+
+
+            if (slotItem.Name != crafting)
             {
-                crafting = slot.currentItem.ToString();
-                string result = crafting.Replace(replace, "");
-                Debug.Log(result);
+                if (slotItem.quantity > 1)
+                {
+                    //subract one from quantity on craft
+                }
+                crafting = slotItem.Name;
+                Debug.Log(crafting);
+
 
             }
         }
