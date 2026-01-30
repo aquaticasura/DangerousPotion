@@ -4,7 +4,7 @@ public class CraftingLogic : MonoBehaviour
 {
 
     public Slot slot;
-    public string crafting;
+    public int brewingitem;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,21 +23,21 @@ public class CraftingLogic : MonoBehaviour
 
 
 
-            if (slotItem.Name != crafting)
+            if (slotItem.ID != brewingitem)
             {
                 if (slotItem.quantity > 1)
                 {
                     //subract one from quantity on craft
                 }
-                crafting = slotItem.Name;
-                Debug.Log(crafting);
+                brewingitem = slotItem.ID;
+                Debug.Log(brewingitem);
 
 
             }
         }
         else
         {
-            crafting = null;
+            brewingitem = 0;
             return;
         }
     }

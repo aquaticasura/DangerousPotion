@@ -10,6 +10,7 @@ public class HotbarController : MonoBehaviour
     public GameObject slotPrefab;
     public int slotCount = 5;
     public string itemhold;
+    public Slot hotbarslot1;
 
 
     private string replace = "(Clone)";
@@ -27,7 +28,7 @@ public class HotbarController : MonoBehaviour
         hotbarKeys = new Key[slotCount];
         for (int i = 0; i < slotCount; i++)
         {
-            hotbarKeys[i] = i < 5 ? (Key)((int)Key.Digit1 + i) : Key.Digit0;
+            hotbarKeys[i] = i < 9 ? (Key)((int)Key.Digit1 + i) : Key.Digit0;
         }
     }
 

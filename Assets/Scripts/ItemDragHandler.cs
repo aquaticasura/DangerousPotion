@@ -11,11 +11,13 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public float maxDropDistance = 3f;
 
     private InventoryController inventoryController;
+    public HotbarController hotbarcontroller;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
         inventoryController = InventoryController.Instance;
+        GetComponent<HotbarController>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -153,7 +155,13 @@ public class ItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         {
             SplitStack();
         }
+        if (eventData.clickCount == 2)
+        {
+            Debug.Log("double click");
+            //item go inventory
+        }
     }
+
 
 
 
