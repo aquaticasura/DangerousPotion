@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JamieDialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Jamie
-  npcPortrait: {fileID: -3972179749553808558, guid: 431e3c7241f052d4f97248d7dd7a728a, type: 3}
+  npcPortrait: {fileID: -2600964930147530034, guid: 54f24f68d4f67ca44b1b3e0cb644f784, type: 3}
   dialogueLines:
   - Howdy
   - Im Jamie and you are?
