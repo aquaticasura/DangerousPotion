@@ -230,8 +230,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 543525313
-  m_SortingLayer: 0
+  m_SortingLayerID: -797792103
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5812483118317372028, guid: 43377f3a0cfeeed23be6014de11f4bbc, type: 3}
@@ -309,6 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemDragHandler
   minDropDinstance: 2
   maxDropDistance: 3
+  hotbarcontroller: {fileID: 0}
 --- !u!114 &5969770759798262199
 MonoBehaviour:
   m_ObjectHideFlags: 0
