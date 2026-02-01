@@ -7658,7 +7658,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -12165,7 +12165,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13143,10 +13143,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1329357701260633474}
   - component: {fileID: 7456481583535858485}
-  - component: {fileID: 1204338465062313495}
   - component: {fileID: 2693282610248035028}
   - component: {fileID: 7089107743073096918}
   - component: {fileID: 7456481583535858486}
+  - component: {fileID: 7456481583535858487}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13503,14 +13503,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1204338465062313495
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 118985155148793375}
-  m_Enabled: 1
 --- !u!1 &1205198960978284702
 GameObject:
   m_ObjectHideFlags: 0
@@ -16539,6 +16531,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!81 &7456481583535858487
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118985155148793375}
+  m_Enabled: 1
 --- !u!1 &7561698750951602866
 GameObject:
   m_ObjectHideFlags: 0

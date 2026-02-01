@@ -26,7 +26,7 @@ public class MusicManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(backgroundMusic != null)
+        if (backgroundMusic != null)
         {
             PlayBackgroundMusic(false, backgroundMusic);
         }
@@ -43,7 +43,7 @@ public class MusicManager : MonoBehaviour
         {
             audioSource.clip = audioClip;
         }
-        else if (audioSource.clip != null)
+        if (audioSource.clip != null)
         {
             /*if (resetSong)
             {
