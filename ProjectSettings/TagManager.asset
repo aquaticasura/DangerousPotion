@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - player
   - Hover
+  - load
   layers:
   - Default
   - TransparentFX

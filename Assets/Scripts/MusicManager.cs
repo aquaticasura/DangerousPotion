@@ -4,16 +4,16 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
-    private static MusicManager instance;
+    private static MusicManager Instance;
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
     [SerializeField] private Slider musicSlider;
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             audioSource = GetComponent<AudioSource>();
             DontDestroyOnLoad(gameObject);
         }
@@ -35,7 +35,7 @@ public class MusicManager : MonoBehaviour
 
     public static void SetVolume(float volume)
     {
-        instance.audioSource.volume = volume;
+        Instance.audioSource.volume = volume;
     }
     public void PlayBackgroundMusic(bool resetSong, AudioClip audioClip = null)
     {
@@ -45,10 +45,10 @@ public class MusicManager : MonoBehaviour
         }
         else if (audioSource.clip != null)
         {
-            if (resetSong)
+            /*if (resetSong)
             {
                 audioSource.Stop();
-            }
+            }*/
             audioSource.Play();
         }
     }
