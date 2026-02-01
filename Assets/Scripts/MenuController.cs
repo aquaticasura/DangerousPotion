@@ -18,16 +18,20 @@ public class MenuController : MonoBehaviour
     {
 
     }
+    public void menu()
+    {
+        if (!menuCanvas.activeSelf && PauseController.IsGamePaused)
+        {
+            return;
+        }
+        menuCanvas.SetActive(!menuCanvas.activeSelf);
+        PauseController.SetPause(menuCanvas.activeSelf);
+    }
     public void Menu(InputAction.CallbackContext context)
     {
         if (context.canceled)
         {
-            if(!menuCanvas.activeSelf && PauseController.IsGamePaused)
-            {
-                return;
-            }
-            menuCanvas.SetActive(!menuCanvas.activeSelf);
-            PauseController.SetPause(menuCanvas.activeSelf);
+            menu();
         }
 
     }
