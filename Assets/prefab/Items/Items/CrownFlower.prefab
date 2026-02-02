@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3327766000083226066, guid: d8bf91100ae8e5b3d973dfaac268232c, type: 3}
       propertyPath: m_Name
-      value: Crown Flower Variant
+      value: CrownFlower
       objectReference: {fileID: 0}
     - target: {fileID: 3429287979919249422, guid: d8bf91100ae8e5b3d973dfaac268232c, type: 3}
       propertyPath: m_Sprite
@@ -90,11 +90,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8800065186242121917, guid: d8bf91100ae8e5b3d973dfaac268232c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 965.65015
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8800065186242121917, guid: d8bf91100ae8e5b3d973dfaac268232c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 551.78485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8800065186242121917, guid: d8bf91100ae8e5b3d973dfaac268232c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

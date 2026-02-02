@@ -8,9 +8,11 @@ public class ItemSpawner : MonoBehaviour
     public GameObject itemholder;
     int haschildren;
     [SerializeField] float maxspawn, lowspawn, spawnrate;
+    [SerializeField] Vector2 spawnposition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        itemtype.transform.position = spawnposition;
         spawnrate = Random.Range(maxspawn, lowspawn);
         InvokeRepeating("itemspawner", spawnrate, spawnrate);
 
@@ -27,8 +29,8 @@ public class ItemSpawner : MonoBehaviour
     {
         if ( haschildren == 0 )
         {
+            itemtype.transform.position = spawnposition;
             Instantiate(itemtype, itemholder.transform);
-            Debug.Log($"spawnrate: {spawnrate}");
         }
 
     }
