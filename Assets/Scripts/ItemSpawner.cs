@@ -20,7 +20,6 @@ public class ItemSpawner : MonoBehaviour
     void Update()
     {
         haschildren = itemholder.transform.childCount;
-        Debug.Log(haschildren);
 
 
     }
