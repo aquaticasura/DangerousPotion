@@ -3,7 +3,7 @@ using UnityEngine;
 public class BrewingScript : MonoBehaviour
 {
     public CraftingLogic brewslot1, brewslot2, brewslot3;
-    public int brewslotint1, brewslotint2, brewslotint3;
+    public string brewslotint1, brewslotint2, brewslotint3;
     private InventoryController inventoryController;
     public GameObject healthpotion;
 
@@ -16,9 +16,9 @@ public class BrewingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        brewslotint1 = brewslot1.brewingitem;
-        brewslotint2 = brewslot2.brewingitem;
-        brewslotint3 = brewslot3.brewingitem;
+        brewslotint1 = brewslot1.brewingitem.ToString();
+        brewslotint2 = brewslot2.brewingitem.ToString();
+        brewslotint3 = brewslot3.brewingitem.ToString();
         
     }
 
@@ -32,13 +32,13 @@ public class BrewingScript : MonoBehaviour
         //6 = creely
         //7 = trote
         //8 = desert mist
-
-        int potion = brewslotint1 + brewslotint2 + brewslotint3;
+        
+        string potion = brewslotint1 + brewslotint2 + brewslotint3;
         if (brewslot1.brewingamount > 1)
         { brewslot1.brewingamount -= 1; }
         
         Debug.Log(potion);
-        if (potion == 9)
+        if (potion == "113" || potion == "311" || potion == "131" )
         {
             Debug.Log("Health Potion Brewed");
             bool itemAdded = inventoryController.AddItem(healthpotion);
